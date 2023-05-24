@@ -61,8 +61,8 @@ public class TravelAdventuresController {
     } else {
       adventureToUpdate.setBlogCompleted(false);
     }
-    this.adventureRepository.save(adventureToUpdate);
-    return adventureToUpdate;
+    Adventure updatedAdventure = this.adventureRepository.save(adventureToUpdate);
+    return updatedAdventure;
   }
 
   @DeleteMapping(path = "/{id}")
